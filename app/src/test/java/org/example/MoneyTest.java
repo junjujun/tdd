@@ -23,6 +23,15 @@ class MoneyTest {
     }
 
     @Test
+    public void testPlusReturnsSum() {
+        Money five = Money.dollar(5);
+        Expression result = five.plus(five);
+        Sum sum = (Sum) result;
+        assertEquals(five, sum.augend); // augend: 被加算数
+        assertEquals(five, sum.addend); // addend: 加数
+    }
+
+    @Test
     public void testEquality() {
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));
         assertFalse(Money.dollar(5).equals(Money.dollar(6)));
