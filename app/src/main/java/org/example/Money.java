@@ -1,7 +1,9 @@
 package org.example;
 
-public class Money {
+public abstract class Money {
     protected int amount;
+
+    abstract Money times(int multiplier);
 
     @Override
     public boolean equals(Object object) {
@@ -10,7 +12,7 @@ public class Money {
                 && getClass().equals(money.getClass());
     }
 
-    static Dollar dollar(int amount) {
+    static Money dollar(int amount) {
         return new Dollar(amount);
     }
 }
