@@ -11,6 +11,6 @@ public class PositiveInt {
     }
 
     boolean isEven() {
-        return true;
+        return (value % 2 == 0);
     }
 }

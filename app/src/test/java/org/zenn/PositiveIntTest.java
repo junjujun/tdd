@@ -7,7 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class PositiveIntTest {
     @Test
     public void testIsEven() {
-        PositiveInt positiveInt = new PositiveInt(2);
-        assertTrue(positiveInt.isEven());
+        PositiveInt two = new PositiveInt(2);
+        assertTrue(two.isEven());
+
+        PositiveInt one = new PositiveInt(1);
+        assertFalse(one.isEven());
     }
 }
